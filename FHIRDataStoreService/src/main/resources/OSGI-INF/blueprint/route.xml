@@ -2,7 +2,7 @@
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
            xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf">
 
-    <bean id="hbaseProcessor" class="org.mayo.camel.processor.HBaseProcessor"/>
+    <bean id="hbaseProcessor" class="org.mayo.HBaseProcessor"/>
 
     <cxf:rsServer id="rsServer" address="/fss-mayo-rest"
                   serviceClass="org.mayo.camel.rest.FSSService"/>
