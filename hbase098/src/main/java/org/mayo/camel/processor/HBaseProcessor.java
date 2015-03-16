@@ -27,7 +27,7 @@ public class HBaseProcessor implements Processor {
             String id = exchange.getIn().getHeader("id", String.class);
             Get get = new Get(Bytes.toBytes(id));
             Result result = table.get(get);
-            List<KeyValue> kvs = result.getColumn(Bytes.toBytes(exchange.getIn().getHeader("CamelHBaseFamily", String.class)), Bytes.toBytes(exchange.getIn().getHeader("CamelHBaseQualifier", String.class)));
+            List<KeyValue> kvs = result.getColumn(Bytes.toBytes(exchange.getIn().getHeader("family", String.class)), Bytes.toBytes(exchange.getIn().getHeader("qualifier", String.class)));
             exchange.getIn().setBody(kvs);
         }
     }
