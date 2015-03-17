@@ -30,7 +30,7 @@
 
     <modules>
         <module>FHIRDataStoreService</module>
-        <module>hbase098</module>
+        <module>hbase</module>
     </modules>
 
     <build>
